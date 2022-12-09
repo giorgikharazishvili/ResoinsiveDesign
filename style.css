@@ -1,0 +1,142 @@
+:root {
+    --clr-primary-200: #F3EED9;
+    --clr-primary-400: #824936;
+
+    --clr-neutral-100: #fff;
+    --clr-neutral-900: #222C2A;
+
+    --ff-primary: 'Roboto' sans-serif;
+    --ff-accent: 'Playfair Display', serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--ff-accent);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+* *,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    font-weight: 900;
+    font-family: var(--ff-accent);
+    margin-bottom: 1em;
+}
+
+img {
+    max-width: 100%;
+}
+
+header,
+section {
+    padding: 5rem 0rem;
+}
+
+.header-container {
+    margin-inline: auto;
+    width: max(90%);
+    max-width: 44rem;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 112rem);
+
+}
+
+.bg-white h2 {
+    color: var(--clr-primary-400);
+}
+
+.bg-light {
+    background-color: var(--clr-primary-200);
+    color: var(--clr-primary-400);
+}
+
+.bg-dark {
+    color: var(--clr-primary-200);
+    background-color: var(--clr-neutral-900);
+}
+
+.bg-primary {
+    color: var(--clr-primary-200);
+    background-color: var(--clr-primary-400);
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.split > * {
+    max-width:  45rem;
+}
+
+@media (min-width: 400px) {
+
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis: 100%;
+    }
+
+    .split  > * + * { 
+        margin-left: 4rem;
+    }
+
+}
+
+@media (min-width: 1000px) {
+
+    header,
+    section {
+        padding: 8rem 0rem;
+    }
+
+    .split  > * + * { 
+        margin-left: 7rem;
+    }
+
+    body {
+        font-family: var(--ff-primary);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .header-container {
+        margin-inline: auto;
+        width: max(90%);
+        max-width: 54rem;
+        text-align: center;
+    }
+
+}
